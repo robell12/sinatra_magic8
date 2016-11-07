@@ -1,0 +1,17 @@
+<h1 class="intro">This 8ball is very magical. Give it any question and it will give you a sarcastic response 100% of the time. That is nearly unheard of. Go ahead and try it out.</h1>
+<div class="form">
+	<form method = 'POST' action="/">
+		<input type="text" name="question" required />
+		<button type='submit'>Submit</button>
+	</form>
+</div>
+
+<% $ans=["Maybe you shoul join the army. That might make a man out of you", "Medical school is fairly cheap these days. Give that a try.", "Sorry I went out to lunch. Be back in 20 min", "Don't look behind you. Bad news bears.", "I don't know that answer and I don't care", "That's what your mom asked me the other day.", "The better question is: 'Who cares?'", "Maybe I should find a better job. These questions are ridiculous."] %>
+<% if @question %>
+<h1>The magic 8 ball is ready to answer</h1>
+<%= "#{@ans.sample}" %>
+<% end %>
+
+<div class="eight_ball">
+	<img src="/images/8_ball.jpg" />
+</div>
